@@ -13,6 +13,10 @@ class Nuage{
         int size() const;
         void ajouter(Point & p);
 
+    typedef std::vector<Point *>::const_iterator const_iterator;
+    Nuage::const_iterator begin() const;
+    Nuage::const_iterator end() const;
+
 };
 
 
