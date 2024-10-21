@@ -120,7 +120,7 @@ TEST_CASE ( "TP3_Chaine::ConversionVariadic" ) {
 }
 
 //------------------------------------------------------------------------------------------------ 4
-/*TEST_CASE ( "TP3_Chaine::ConversionTuple1" ) {
+TEST_CASE ( "TP3_Chaine::ConversionTuple1" ) {
  std::tuple<std::string,int,double>      t1{"Smith",10,13.27};
  std::tuple<std::string,int,double,long> t2{"Smith",10,13.27,100};
 
@@ -146,7 +146,7 @@ TEST_CASE ( "TP3_Chaine::ConversionVariadic" ) {
  }
 
  REQUIRE ( erreur == 2 );
-}*/
+}
 
 //------------------------------------------------------------------------------------------------ 5
 using Identite = std::tuple<std::string,std::string>; // {nom,prenom}
