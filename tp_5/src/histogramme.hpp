@@ -4,11 +4,14 @@
 #include "valeur.hpp"
 #include "echantillon.hpp"
 #include "classe.hpp"
+#include <iostream>
+#include <set>
+
 
 
 class Histo{
     private:
-        std::vector<Classe> tab;
+        std::set<Classe> tab;
 
     public:
         Histo(double borneInf, double borneSup, int nbClasses)
@@ -16,11 +19,27 @@ class Histo{
             double tmp = (borneSup-borneInf)/nbClasses;
             for(int i=0; i<nbClasses; i++)
             {
-                tab.push_back(Classe(borneInf+i*tmp, borneSup+i*tmp));
+                tab.insert(Classe(borneInf+i*tmp, borneInf+(i+1)*tmp, 0));
             }
         }
 
-        std::vector<Classe> getClasses(){return tab;}
+        std::set<Classe> getClasses(){return tab;}
+
+        void ajouter(Echantillon e)
+        {
+            for (unsigned i = 0; i<e.getTaille(); i++)
+            {
+                Valeur V = e.getValeur(i);
+                typename std::set<Classe>::iterator it = std::find_if(tab.begin(), tab.end(), [V](Classe c)
+                                                                                        {return V.getNombre() >= c.getBorneInf() && V.getNombre() < c.getBorneSup();});
+                Classe c = *it;
+                tab.erase(it);
+                c.ajouter();
+                tab.insert(c);
+            } 
+
+
+        }
 
 };
 

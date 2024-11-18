@@ -10,7 +10,7 @@ class Echantillon{
         unsigned taille;
 
     public:
-        Echantillon() {};
+        Echantillon() {taille = 0;};
 
         unsigned getTaille() {return taille;}
         void ajouter(double r) {tab.push_back(Valeur(r));

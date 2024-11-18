@@ -268,8 +268,21 @@ CMakeFiles/tp5_test.dir/test/tp5_test.cpp.o: test/tp5_test.cpp \
   src/histogramme.hpp \
   src/valeur.hpp \
   src/echantillon.hpp \
-  src/classe.hpp
+  src/classe.hpp \
+  /usr/include/c++/12/iostream \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
+  /usr/include/c++/12/set \
+  /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_set.h \
+  /usr/include/c++/12/bits/stl_multiset.h
 
+
+/usr/include/c++/12/bits/stl_multiset.h:
+
+/usr/include/c++/12/bits/stl_tree.h:
+
+/usr/include/c++/12/istream:
 
 src/classe.hpp:
 
@@ -310,6 +323,8 @@ src/valeur.hpp:
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
 /usr/include/c++/12/bits/range_access.h:
+
+/usr/include/c++/12/bits/stl_set.h:
 
 /usr/include/c++/12/bits/functexcept.h:
 
@@ -631,6 +646,8 @@ test/catch.hpp:
 
 /usr/include/c++/12/typeinfo:
 
+/usr/include/c++/12/set:
+
 /usr/include/c++/12/bits/ios_base.h:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/gthr.h:
@@ -657,9 +674,13 @@ test/catch.hpp:
 
 /usr/include/c++/12/bits/locale_facets.tcc:
 
+/usr/include/c++/12/bits/istream.tcc:
+
 /usr/include/asm-generic/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
+
+/usr/include/c++/12/iostream:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 

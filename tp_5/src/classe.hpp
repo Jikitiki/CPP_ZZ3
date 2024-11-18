@@ -9,10 +9,11 @@ class Classe{
     public:
         Classe(){}
         Classe(double a, double b){bornesInf = a; bornesSup = b;}
+        Classe(double a, double b, unsigned q){bornesInf = a; bornesSup = b; quantite = q;}
 
-        double getBorneInf(){return bornesInf;}
-        double getBorneSup(){return bornesSup;}
-        unsigned getQuantite(){return quantite;}
+        double getBorneInf() const {return bornesInf;}
+        double getBorneSup() const {return bornesSup;}
+        unsigned getQuantite() const {return quantite;}
 
         void setBorneInf(double d){bornesInf = d;}
         void setBorneSup(double d){bornesSup = d;}
@@ -20,6 +21,13 @@ class Classe{
 
         void ajouter(){quantite++;}
 
+
 };
+
+
+bool operator<(const Classe& a, const Classe& b)
+{
+    return a.getBorneInf() < b.getBorneInf();
+}
 
 #endif
